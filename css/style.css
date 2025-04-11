@@ -1068,9 +1068,6 @@ input::placeholder {
 
 /* LARGER DEVICE */
 @media (min-width: 1200px) {
-  body {
-    background-color: red;
-  }
   .container {
     max-width: 150rem;
   }

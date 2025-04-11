@@ -54,7 +54,7 @@ dropDown.addEventListener("click", function () {
 
 /////////////////////////////////////////////////
 // FUNCTIONALITY FOR BLOG
-import { state, fetchArticles } from "./blogArticle.js";
+import { state, fetchArticles, updateSearchQuery } from "./blogArticle.js";
 
 document.getElementById("search-btn").addEventListener("click", () => {
   let queryInput = document.getElementById("search-input").value.trim();

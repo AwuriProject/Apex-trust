@@ -1,29 +1,26 @@
 const apiKey = `yiIViD646dtcT2MQ2dg24Qw0l5tA6ySP3BkFj8kW`;
 
-// export let currentPage = 1;
-// export const pageSize = 10;
-
-// export let searchQuery = "tsla"; // Default search query
-// export let totalArticle = 0;
 export const state = {
   currentPage: 1,
   pageSize: 10,
   totalArticle: 100,
   searchQuery: "",
 };
-export const fetchArticles = async (query = searchQuery, page = 1) => {
+export const fetchArticles = async (query = state.searchQuery, page = 1) => {
   try {
-    const offset = (page - 1) * pageSize;
+    const offset = (page - 1) * state.pageSize;
     const response = await fetch(
-      `https://api.marketaux.com/v1/news/all?countries=gb&filter_entities=true&limit=${pageSize}&offset=${offset}&q=${query}&published_after=${getFormattedDate()}&api_token=${apiKey} `
+      `https://api.marketaux.com/v1/news/all?countries=gb&filter_entities=true&limit=${
+        state.pageSize
+      }&offset=${offset}&q=${query}&published_after=${getFormattedDate()}&api_token=${apiKey} `
     );
     const data = await response.json();
     console.log(data);
     if (!data.data) return;
     if (data.data) {
-      totalArticle = data.meta.found;
+      state.totalArticle = data.meta.found;
       displayArticles(data.data);
-      updatePagination(page, Math.ceil(totalArticle / pageSize));
+      updatePagination(page, Math.ceil(state.totalArticle / state.pageSize));
     } else {
       document.getElementById("article-container").innerHTML =
         "<p>No articles found.</p>";
@@ -79,9 +76,9 @@ const updatePagination = (page, totalPages) => {
 };
 
 export const updateSearchQuery = (query) => {
-  searchQuery = query;
-  currentPage = 1;
-  fetchArticles(query, currentPage);
+  state.searchQuery = query;
+  state.currentPage = 1;
+  fetchArticles(query, state.currentPage);
 };
 
 function getFormattedDate() {
@@ -89,4 +86,3 @@ function getFormattedDate() {
   return now.toISOString().split("T")[0];
 }
 getFormattedDate();
-// https://api.marketaux.com/v1/news/all?countries=gb&filter_entities=true&limit=${pageSize}&offset=${offset}&q=${query}&published_after=${getFormattedDate()}&api_token=${apiKey}

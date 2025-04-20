@@ -107,41 +107,6 @@ function showNextSlide() {
 
 setInterval(showNextSlide, 3000);
 
-/////////////////////////////////////////////
-// FUNCTIONALITY ON MOBILE
-// const mobileContainer = document.querySelector(".mobile-operation--tab");
-// const tab = document.querySelectorAll(".mobile-btn");
-// const mobileContent = document.querySelectorAll(".mobile-content");
-// Tabbed Component
-// Buttons
-// const tabs = document.querySelectorAll(".mobile-btn");
-
-// // Button Div
-// const tabsContainer = document.querySelector(".mobile-operation--tab");
-
-// // Button Content
-// const tabsContent = document.querySelectorAll(".mobile-content");
-
-// tabsContainer.addEventListener("click", function (e) {
-//   const clicked = e.target.closest(".mobile-btn ");
-//   console.log("clicked");
-
-//   // Guard Clause
-//   if (!clicked) return;
-
-//   // Remove Active Classes
-//   tabs.forEach((t) => t.classList.remove("mobile-btn--active"));
-//   tabsContent.forEach((c) => c.classList.remove("mobile-content--active"));
-
-//   // Activate tab
-//   clicked.classList.add("mobile-btn--active");
-
-//   // Activate Content area
-//   document
-//     .querySelector(`.mobile-content--${clicked.dataset.tab}`)
-//     .classList.add("mobile-content--active");
-// });
-
 //////////////////////////////////////
 // SLIDES
 const slider = function () {
@@ -227,24 +192,7 @@ const slider = function () {
 
 slider();
 
-/////////////////////////////////////////////////
-// STICKY HEADER
-// const headerContainer = document.querySelector(".header");
-
-// const stickyLogo = function (entries) {
-//   const [entry] = entries;
-//   console.log(entry);
-//   if (!entry.isIntersecting)
-//     document.querySelector(".sticky-header").classList.add("sticky");
-//   else document.querySelector(".sticky-header").classList.remove("sticky");
-// };
-// const headerObserver = new IntersectionObserver(stickyLogo, {
-//   root: null,
-//   threshold: 0,
-//   rootMargin: `-85px`,
-// });
-// headerObserver.observe(headerContainer);
-
+//////////////////////////////////////////////
 const windowWidth = window.innerWidth;
 const scrollH = window.scrollY;
 console.log(windowWidth, scrollH);

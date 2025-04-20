@@ -1,0 +1,65 @@
+/* ABOUT HTML */
+.happy__cust--section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.happy__cust--subsection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 500px;
+  height: 15rem;
+  padding: 2.4rem;
+}
+.cust__color--1 {
+  background-color: var(--color--white);
+  color: #666;
+}
+.cust__color--2 {
+  background-color: var(--color--dark);
+  color: var(--color--white);
+  font-weight: 700;
+}
+.happy__cust--num {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+.happy__cust p {
+  font-size: 1.8rem;
+  line-height: 100%;
+}
+.cust__color--3 {
+  background-color: var(--color-primary-darker);
+  color: var(--color--white);
+  font-weight: bold;
+}
+.cust__color--3 .happy__cust--icon-svg {
+  background-color: #37996a;
+  opacity: 0.5;
+}
+.happy__cust--icon-svg {
+  background-color: var(--color-primary-darker);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.happy__cust--icon-svg img {
+  width: 40px;
+}
+.plus-counter::after {
+  content: "K+";
+  margin-left: 2px;
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  .happy__cust--section {
+    flex-direction: row;
+  }
+}

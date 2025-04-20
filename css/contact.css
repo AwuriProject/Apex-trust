@@ -1,0 +1,109 @@
+.contact__detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contact__detail h3 {
+  color: var(--color-primary);
+  text-transform: uppercase;
+  font-size: var(--small-font);
+  font-weight: 300;
+  margin-bottom: 24px;
+}
+.contact__detail h2 {
+  text-transform: capitalize;
+  font-size: 2.2rem;
+  color: var(--color--dark);
+  margin-bottom: 24px;
+}
+.contact__info {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 2rem;
+  padding-top: 3rem;
+}
+.contact__location {
+  background-image: var(--gradient-primary);
+  width: 380px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  position: relative;
+  margin-top: 2rem;
+}
+.contact__location h2 {
+  margin: 0;
+}
+.contact__location--icon {
+  background-color: var(--color-primary-darker);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: -3rem;
+  transform: translate(-50%);
+}
+.contact__location--icon i {
+  font-size: 2rem;
+  color: #fff;
+}
+.form {
+  background-image: var(--gradient-primary);
+  padding: 5rem 3rem;
+  text-align: center;
+}
+.form h3 {
+  color: var(--color--white);
+  text-transform: uppercase;
+  font-size: var(--small-font);
+  font-weight: 300;
+  margin-bottom: 24px;
+}
+.form h2 {
+  text-transform: capitalize;
+  font-size: 2.2rem;
+  color: var(--color--white);
+  margin-bottom: 24px;
+}
+.form .input-group {
+  margin: 1.6rem 0;
+  position: relative;
+}
+.form .input-group label {
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  pointer-events: none;
+  transition: 0.3s ease all;
+  font-size: 16px;
+}
+.form input:focus + label {
+  top: -15px;
+}
+.form input {
+  border: none;
+  outline: none;
+  width: 100%;
+}
+#text__area {
+  padding: 5rem;
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .contact__info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .contact__info {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

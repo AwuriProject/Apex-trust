@@ -1,0 +1,161 @@
+.credit__card--section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.credit__card--section h2 {
+  text-transform: capitalize;
+  font-size: 2.2rem;
+  color: var(--color--dark);
+  margin-bottom: 24px;
+  text-align: center;
+}
+.credit__card--section h3 {
+  color: var(--color-primary);
+  text-transform: uppercase;
+  font-size: var(--small-font);
+  font-weight: 300;
+  margin-bottom: 24px;
+}
+.credit__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.4rem;
+}
+.credit__card a {
+  background-color: #000;
+  padding: 10px 15px;
+  margin-bottom: 1.4rem;
+  width: 200px;
+}
+.credit__card h2 {
+  color: #000;
+  margin: 0;
+}
+.credit__card p {
+  color: #666;
+  text-align: center;
+  padding: 0 3rem;
+}
+.credit__card--1 {
+  width: 380px;
+  height: 250px;
+  padding: 2rem;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--color-primary-darker);
+  color: #fff;
+}
+.credit__card--1 h2 {
+  text-align: left;
+  font-size: 1.6rem;
+  margin: 0;
+  color: #fff;
+}
+.credit__card--1 img {
+  width: 30px;
+}
+.credit__card--title {
+  display: flex;
+  justify-content: space-between;
+}
+.credit__card--title h3 {
+  margin: 0;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 1.6rem;
+}
+.Credit__card--number p {
+  text-align: center;
+  font-size: 1.6rem;
+  letter-spacing: 2.6;
+  font-weight: 500;
+  padding: 0;
+}
+.Credit__card--number p span {
+  font-size: 0.6rem;
+  display: block;
+  width: 50px;
+  margin-left: 0.4rem;
+}
+.credit__card--valid {
+  display: flex;
+  gap: 2px;
+  justify-content: flex-end;
+  align-items: center;
+}
+.credit__card--valid h2 {
+  font-size: 0.4rem;
+}
+.credit__card--valid p {
+  font-size: 1.4rem;
+  padding: 0;
+}
+.credit__card--visa-silver {
+  background-color: #b8860b;
+  color: #fff;
+  width: 380px;
+  height: 250px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 2.4rem;
+}
+.credit__card--visa-silver img {
+  width: 30px;
+}
+.visa__silver--title {
+  display: flex;
+  justify-content: space-between;
+}
+.visa__silver--title img {
+  width: 80px;
+}
+.visa__silver--title h3 {
+  color: #fff;
+  font-weight: bold;
+}
+.visa__silver--text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.visa__silver--name h2 {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-size: 1.6rem;
+}
+.visa__silver--name p {
+  font-size: 1.2rem;
+  letter-spacing: 2;
+  color: #666;
+  padding: 0;
+}
+.visa__silver--expire h4 {
+  font-size: 0.8rem;
+  color: #666;
+}
+.visa__silver--expire p {
+  padding: 0;
+  font-size: 0.8rem;
+  color: #666;
+}
+@media (min-width: 1024px) {
+  .credit__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2.4rem;
+  }
+}
+@media (min-width: 1200px) {
+  .credit__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -52,11 +52,9 @@ const displayArticles = (articles) => {
       article.title || "No image available"
     }"/>
                 <h2 class="article-title">${
-                  article.title || "No title available"
-                }</h2>
-                <p class="article-desc"><strong>${
                   article.description || "No description available"
-                }</strong></p>
+                }</h2>
+                
                 <p class="article-content">${
                   articleContent || "No content available"
                 }</p>
